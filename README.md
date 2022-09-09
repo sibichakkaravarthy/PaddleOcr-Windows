@@ -1,3 +1,13 @@
+PaddleOCR aims to create multilingual, awesome, leading, and practical OCR tools that help users train better models and apply them into practice.
+
+This is the windows version of PaddleOCR "https://github.com/PaddlePaddle/PaddleOCR/" 
+
+Guideline for Usage
+
+1. Execute ocrrunner.exe 
+2. Choose Option 1 to install dependencies (Use it if you are using PaddleOCR-Windows for first time)
+
+
 # QB64
 
 ![QB64](source/qb64.png)
