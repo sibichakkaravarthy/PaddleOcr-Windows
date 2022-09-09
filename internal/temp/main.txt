@@ -1,0 +1,127 @@
+S_0:;
+do{
+sub__title(qbs_new_txt_len("Paddle OCR",10));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(1);}while(r);
+do{
+sub_cls(NULL,NULL,0);
+if(!qbevent)break;evnt(2);}while(r);
+do{
+tqbs=qbs_new(0,0);
+qbs_set(tqbs,qbs_new_txt_len("Menu:",5));
+if (new_error) goto skip1;
+makefit(tqbs);
+qbs_print(tqbs,0);
+qbs_print(nothingstring,1);
+skip1:
+qbs_free(tqbs);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(3);}while(r);
+do{
+tqbs=qbs_new(0,0);
+qbs_set(tqbs,qbs_new_txt_len("1. Install dependencies",23));
+if (new_error) goto skip2;
+makefit(tqbs);
+qbs_print(tqbs,0);
+qbs_print(nothingstring,1);
+skip2:
+qbs_free(tqbs);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(4);}while(r);
+do{
+tqbs=qbs_new(0,0);
+qbs_set(tqbs,qbs_new_txt_len("2. Run PaddleOCR",16));
+if (new_error) goto skip3;
+makefit(tqbs);
+qbs_print(tqbs,0);
+qbs_print(nothingstring,1);
+skip3:
+qbs_free(tqbs);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(5);}while(r);
+do{
+tqbs=qbs_new(0,0);
+qbs_set(tqbs,qbs_new_txt_len("Enter choice",12));
+if (new_error) goto skip4;
+makefit(tqbs);
+qbs_print(tqbs,0);
+qbs_print(nothingstring,1);
+skip4:
+qbs_free(tqbs);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(6);}while(r);
+do{
+qbs_print(qbs_new_txt("? "),0);
+qbs_input_variabletypes[1]=536870944;
+qbs_input_variableoffsets[1]=&(*__SINGLE_N);
+qbs_input(1,1);
+if (stop_program) end();
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(7);}while(r);
+S_8:;
+if ((-(*__SINGLE_N== 1 ))||new_error){
+if(qbevent){evnt(8);if(r)goto S_8;}
+do{
+sub_shell(qbs_new_txt_len("paddleocr_installer.bat",23),1);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(9);}while(r);
+S_10:;
+}else{
+if (-(*__SINGLE_N== 2 )){
+if(qbevent){evnt(10);if(r)goto S_10;}
+do{
+qbs_print(qbs_new_txt_len("Enter input file path ",22),0);
+qbs_input_variabletypes[1]=ISSTRING;
+qbs_input_variableoffsets[1]=__STRING_A;
+qbs_input(1,1);
+if (stop_program) end();
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(11);}while(r);
+do{
+qbs_print(qbs_new_txt_len("Enter output file path ",23),0);
+qbs_input_variabletypes[1]=ISSTRING;
+qbs_input_variableoffsets[1]=__STRING_B;
+qbs_input(1,1);
+if (stop_program) end();
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(12);}while(r);
+do{
+sub_shell(qbs_add(qbs_add(qbs_add(qbs_new_txt_len("python ocr.py ",14),__STRING_A),qbs_new_txt_len(" ",1)),__STRING_B),1);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(13);}while(r);
+}else{
+do{
+tqbs=qbs_new(0,0);
+qbs_set(tqbs,qbs_new_txt_len("Invalid input",13));
+if (new_error) goto skip5;
+makefit(tqbs);
+qbs_print(tqbs,0);
+qbs_print(nothingstring,1);
+skip5:
+qbs_free(tqbs);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(15);}while(r);
+}
+}
+sub_end();
+return;
+}
+void SUB_VWATCH(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data1.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (new_error) goto exit_subfunc;
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free1.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}

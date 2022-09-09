@@ -1,0 +1,6 @@
+if(__SINGLE_N==NULL){
+__SINGLE_N=(float*)mem_static_malloc(4);
+*__SINGLE_N=0;
+}
+if (!__STRING_A)__STRING_A=qbs_new(0,0);
+if (!__STRING_B)__STRING_B=qbs_new(0,0);
