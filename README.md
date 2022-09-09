@@ -1,4 +1,4 @@
-PaddleOCR aims to create multilingual, awesome, leading, and practical OCR tools that help users train better models and apply them into practice.
+PaddleOCR-Windows aims to create multilingual, awesome, leading, and practical OCR tools that help users train better models and apply them into practice.
 
 This is the windows version of PaddleOCR "https://github.com/PaddlePaddle/PaddleOCR/" 
 
